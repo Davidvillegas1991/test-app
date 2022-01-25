@@ -1,0 +1,8 @@
+#dvLogo{
+    display: flex;
+    justify-content: center;
+    height: 250px;
+}
+ul{
+    display: grid;
+}
