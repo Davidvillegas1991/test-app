@@ -11,3 +11,7 @@
 #dvGifsCards{
     text-align: center;
 }
+
+.imgResponsive{
+    width: 100% !important;
+}

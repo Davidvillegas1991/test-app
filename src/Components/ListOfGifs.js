@@ -1,15 +1,12 @@
 import React, {Component,useState,useEffect} from "react";
 import Gift from "./Gift";
-import getGifts from "../Services/getGifs";
+import { useGifs } from "../hooks/useGifs";
 
 function ListOfGifs({params}){
     const {keywords} = params
-    const [gifs,updateValue] = useState([]);
-    
-    useEffect(() =>{
-      getGifts({keywords}).then(gifs =>  updateValue(gifs))
-    },[keywords])
-  
+    const gifs = useGifs({keywords})
+
+
     return(
         <div id="dvGifsCards">
             {
