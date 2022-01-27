@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import getGifts from "../Services/getGifs";
+import React from "react";
+import { Link} from "wouter";
 
 
 //TEST COMMIT
@@ -8,12 +8,12 @@ function Gift({ title, id, url }) {
     return (
 
         <div className="gifCard">
-            <a href={`#${id}`}>
-
+            <Link to={`/details/${id}`} >
                 <h4>{title}</h4>
                 <img className="imgResponsive" src={url}></img>
                 <small>{id}</small>
-            </a>
+          
+            </Link>
         </div>
 
         
